@@ -5,6 +5,10 @@ import Book from "../components/ui/Book";
 import Price from "../components/ui/Price";
 import Rating from "../components/ui/Rating";
 
+//Use the git add command to stage the changes to your files. For example, git add . will stage all changes in the current directory.
+//Use the git commit command to create a commit with a message describing the changes. For example, git commit -m "updated files"
+//Use the git push command to push the changes to the remote repository on GitHub. For example, git push origin master (assuming the remote is named "origin" and the branch you are updating is "master")
+
 const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
