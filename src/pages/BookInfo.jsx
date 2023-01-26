@@ -63,11 +63,11 @@ const BookInfo = ({ books, addToCart, cart }) => {
                   </p>
                 </div>
                 {bookExistOnCart ? (
+                  <button className="btn">Checkout</button>
+                ) : (
                   <button className="btn" onClick={() => addBookToCart(book)}>
                     Add to cart
                   </button>
-                ) : (
-                  <button className="btn">Checkout</button>
                 )}
               </div>
             </div>
