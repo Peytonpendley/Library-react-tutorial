@@ -62,10 +62,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     quidem at nihil, voluptate ducimus tenetur et modi!
                   </p>
                 </div>
-                {bookExistOnCart ? (
+                {bookExistOnCart() ? (
                   <button className="btn" title="title" >Checkout</button>
                 ) : (
-                  <button className="btn" title="title" onClick={() => addBookToCart(book)}>
+                  <button className="btn" title="title" onClick={() => addBookToCart(book.id)}>
                     Add to cart
                   </button>
                 )}
