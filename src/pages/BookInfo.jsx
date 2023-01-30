@@ -18,7 +18,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
   }
 
   function bookExistOnCart(){
-    return cart.find(book => parseInt(book.id) === parseInt(id))
+    return cart.find(book => +book.id === +id)
   }
 
   return (
@@ -62,8 +62,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     quidem at nihil, voluptate ducimus tenetur et modi!
                   </p>
                 </div>
-                {bookExistOnCart() ? (
-                  <button className="btn" title="title" >Checkout</button>
+                {bookExistOnCart ? (
+                  <Link to={"/cart"} className="book__link" >
+                    <button className="btn" title="title" >Checkout</button>
+                  </Link>
                 ) : (
                   <button className="btn" title="title" onClick={() => addBookToCart(book)}>
                     Add to cart
