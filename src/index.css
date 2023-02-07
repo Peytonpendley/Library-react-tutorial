@@ -22,9 +22,6 @@ html {
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 
 nav {
@@ -478,8 +475,7 @@ footer {
 }
 
 .footer__container{
-  position: absolute;
-  height: 100vh;
+  padding: 56px 0;
 }
 
 .footer__logo {
